@@ -46,11 +46,23 @@ class CurrencyConverterMaterialApp extends StatelessWidget {
             ),
 
             //button
-            TextButton(
-                onPressed: () {
-                  print('Hi....');
-                },
-                child: const Text('Click me')),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Click me!'),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {},
+              label: const Text('Enabled'),
+              icon: const Icon(Icons.message),
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.blue),
+                foregroundColor: WidgetStateProperty.all(Colors.green),
+                overlayColor: const WidgetStatePropertyAll(Colors.yellow),
+                shadowColor: const WidgetStatePropertyAll(Colors.red),
+                elevation: const WidgetStatePropertyAll(50.0),
+                padding: const WidgetStatePropertyAll(EdgeInsets.all(20.0)),
+              ),
+            ),
           ],
         ),
       ),
